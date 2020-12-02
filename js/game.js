@@ -104,7 +104,16 @@ class Game{
                   }
                 
 
-         
+                  if(isTouching(fruitGroup,players)){
+                    gameState = 2;
+                    player.score += 1;
+                    //console.log(player.rank);
+                    Player.updateCarAtEnd(player.score);
+              
+                    console.log(player.score)
+              
+                    
+                  }
          
         
          

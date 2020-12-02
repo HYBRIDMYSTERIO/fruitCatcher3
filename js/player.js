@@ -34,6 +34,17 @@ class Player {
             allPlayers = data.val();
         })
     }
-
+    getCarAtEnd(){
+        database.ref('carsAtEnd').on("value",(data)=>{
+          this.score = data.val();
+        })
+      }
+    
+      static updateCarAtEnd(score){
+        database.ref('/').update({
+        carsAtEnd:score
+        });
+    
+      }
     
 }
